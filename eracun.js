@@ -289,6 +289,7 @@ streznik.post('/stranka', function(zahteva, odgovor) {
   
   form.parse(zahteva, function (napaka1, polja, datoteke) {
     zahteva.session.izbrana = polja.seznamStrank;
+    zahteva.session.stranka = polja.seznamStrank;
     odgovor.redirect('/')
   });
 })
